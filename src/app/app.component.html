@@ -5,11 +5,7 @@
 
 <div class="courses">
   <app-course-card
-    *ngFor="let course of courses; index as idx; first as isFirst; last as isLast; even as isEven; odd as isOdd;"
-    [class.is-first]="isFirst"
-    [class.is-last]="isLast"
-    [class.is-even]="isEven"
-    [class.is-odd]="isOdd"
+    *ngFor="let course of courses; index as idx"
     [course]="course"
     [courseIndex]="idx + 1"
     (clickedCourseBtn)="onClickCardBtn($event)"
