@@ -10,4 +10,8 @@ import {COURSES} from '../db-data';
 export class AppComponent {
   title = 'angular-course';
   courses: Course[] = COURSES;
+
+  onClickCardBtn(clickedCourseTitle: string): void {
+    console.log('AppComponent: onClickCard!', clickedCourseTitle);
+  }
 }

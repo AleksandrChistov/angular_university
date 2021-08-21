@@ -11,3 +11,25 @@
     max-width: 400px;
     margin: 50px auto;
 }
+
+.courses .is-first {
+  border-top: 2px solid grey;
+  padding-top: 20px;
+  display: block;
+}
+
+.courses .is-last {
+  border-bottom: 2px solid grey;
+  padding-top: 20px;
+  display: block;
+}
+
+.courses .is-even {
+  background: lightgray;
+  display: block;
+}
+
+.courses .is-odd {
+  background: lightcyan;
+  display: block;
+}
