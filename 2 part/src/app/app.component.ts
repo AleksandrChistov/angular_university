@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
 import {Course} from './model/course';
 import {Observable} from 'rxjs';
+import {CourseService} from './course.service';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +11,9 @@ import {Observable} from 'rxjs';
 export class AppComponent implements OnInit {
   courses$: Observable<Course[]>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private courseService: CourseService) {}
 
   ngOnInit() {
-    const params = new HttpParams()
-      .set('page', '1')
-      .set('pageSize', '10');
-
-    this.courses$ = this.http.get<Course[]>('api/courses', {params});
+    this.courses$ = this.courseService.getAllCourses();
   }
 }
